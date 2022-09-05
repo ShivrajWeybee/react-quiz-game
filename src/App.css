@@ -333,7 +333,7 @@ background: red;
 @keyframes makeItRain {
   from {opacity: 0;}
   50% {opacity: 1;}
-  to {transform: translateY(350px);}
+  to {transform: translateY(650px);}
 }
 
 
