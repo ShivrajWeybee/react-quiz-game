@@ -5,9 +5,12 @@ export const Home = () => {
     const navigate = useNavigate()
     return (
         <div className='home flex'>
-            <h3 className='title'>Are you Dumb !?</h3>
-            <p className='subtitle'>not sure ?</p>
-            <button className='home-btn' onClick={() => navigate('quiz')}>Let's check</button>
+            <p className='hello-text'>Heyy,</p>
+            <h1 className='title'>looks like you are a Muggle !</h1>
+            <p className='subtitle'>want to test yourself ?</p>
+            <div className='flex homepage-btn-wrapper'>
+                <button className='home-btn' onClick={() => navigate('quiz')}>Alohomora</button>
+            </div>
         </div>
     )
 }
