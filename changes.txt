@@ -1,5 +1,8 @@
 
-- answer store thavo joiae : 
-- prev click thay to answer dekhavo joi (jo tik kayro hoy to) : 
-- score mate kaik alag karvu padse : 🎈
-- tik thay aetli var score update nathi karvano : 🎈
+- cursor poiter on answer : ✅
+
+- je option click thyo ae batavo joi : ✅
+
+- result page ma retake no option : ✅
+
+- winning celebration : 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Result } from './Result'
 
 export const Quiz = () => {
@@ -100,6 +101,7 @@ export const Quiz = () => {
     const [ques, setQues] = useState(0);
     const [score, setScore] = useState(0);
     const [clickedAns, setClickedAns] = useState([]);
+    const navigate = useNavigate();
 
     const handlePrevious = () => {
         setQues(prevQues => prevQues === 0 ? 0 : prevQues - 1)
@@ -133,9 +135,10 @@ export const Quiz = () => {
                                             return (
                                                 <li key={i.option}>
                                                     <input
-                                                        className={`options ${clickedAns.findIndex(x => x.questionNo === question[ques].questionStatement && x.clickedOption === i.option) !== -1 ? 'clicked' : ''}`}
                                                         type='button' value={i.option}
-                                                        onClick={checkAnswer} disabled={clickedAns.findIndex(x => x.questionNo === question[ques].questionStatement) !== -1 ? true : false} />
+                                                        onClick={checkAnswer}
+                                                        disabled={clickedAns.findIndex(x => x.questionNo === question[ques].questionStatement) !== -1 ? true : false}
+                                                        className={`options ${clickedAns.findIndex(x => x.questionNo === question[ques].questionStatement && x.clickedOption === i.option) !== -1 ? 'clicked' : ''}`} />
                                                 </li>)
                                         })
                                     }
@@ -153,7 +156,7 @@ export const Quiz = () => {
                             </div>
                         </div>
                     </div> :
-                    <Result score={score} />
+                    navigate('/result', {state: {score: score}})
             }
         </>
     )
