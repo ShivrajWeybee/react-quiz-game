@@ -156,7 +156,7 @@ export const Quiz = () => {
                             </div>
                         </div>
                     </div> :
-                    navigate('/result', {state: {score: score}})
+                    navigate('/result', {state: {score: score}, replace: true})
             }
         </>
     )

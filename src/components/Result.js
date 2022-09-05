@@ -32,7 +32,7 @@ export const Result = () => {
                     <p className='result-text'>Heheey ! You are the Wizard</p> :
                     <p className='result-text'>Yes ! You are a Muggle</p>
             }
-            <input type='button' value='Retake' className='retake-btn' onClick={() => navigate('/quiz')} />
+            <input type='button' value='Retake' className='retake-btn' onClick={() => navigate('/quiz', {replace: true})} />
         </div>
     )
 }
